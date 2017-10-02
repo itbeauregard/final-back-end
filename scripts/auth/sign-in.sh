@@ -9,8 +9,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "credentials": {
       "username": "'"${USER}"'",
-      "password": "'"${PW}"'",
-      "password_confirmation": "'"${PW}"'"
+      "password": "'"${PW}"'"
     }
   }'
 
