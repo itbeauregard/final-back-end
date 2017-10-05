@@ -3,13 +3,13 @@
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/questions"
 LOCATION='Fox Point'
-ASK='What is that in the sky?'
-FIRST='A bird'
-SECOND='A plane'
-THIRD='A flying squirrel'
-FOURTH='A toaster'
-FIFTH='Superman'
-CORRECT='A toaster'
+ASK="Which member of Fleetwood Mac sings 'Everywhere'?"
+FIRST='Stevie Nicks'
+SECOND='Lindsey Buckingham'
+THIRD='Mick Fleetwood'
+FOURTH='Christine McVie'
+FIFTH='John McVie'
+CORRECT='Christine McVie'
 
 curl "${API}${URL_PATH}" \
   --include \
