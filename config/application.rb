@@ -26,6 +26,20 @@ module FinalProjectAPI
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # This is a block of code I added to allow the front end client to access
+    # the sign-in and sign-up methods (to start). I got this block from a Github
+    # issue that posted symtoms similar to what my app was experiencing:
+    # https://github.com/cyu/rack-cors/issues/119
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+                 :headers => :any,
+                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+                 :methods => [:get, :post, :options, :delete, :put, :patch]
+      end
+    end
+
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.

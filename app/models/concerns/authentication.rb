@@ -6,8 +6,8 @@ module Authentication
 
   #
   module ClassMethods
-    def authenticate(email, password)
-      user = find_by(email: email)
+    def authenticate(username, password)
+      user = find_by(username: username)
       return unless user
       user.send :new_token
       user.authenticate password
@@ -18,7 +18,7 @@ module Authentication
     has_secure_password
     before_create :set_token
     after_find :fix_up_token
-    validates :email, uniqueness: true
+    validates :username, uniqueness: true
   end
 
   def logout

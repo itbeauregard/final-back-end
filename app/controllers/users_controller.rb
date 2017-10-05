@@ -16,7 +16,7 @@ class UsersController < ProtectedController
   # POST '/sign-in'
   def signin
     creds = user_creds
-    if (user = User.authenticate creds[:email],
+    if (user = User.authenticate creds[:username],
                                  creds[:password])
       render json: user, serializer: UserLoginSerializer, root: 'user'
     else
@@ -62,7 +62,7 @@ class UsersController < ProtectedController
 
   def user_creds
     params.require(:credentials)
-          .permit(:email, :password, :password_confirmation)
+          .permit(:name, :username, :password, :password_confirmation)
   end
 
   def pw_creds
