@@ -1,15 +1,15 @@
 #!/bin/bash
 
-API="${API_ORIGIN:-http://localhost:4741}"
+API="${API_ORIGIN:-https://monument-app.herokuapp.com}"
 URL_PATH="/questions"
 LOCATION='Fox Point'
-ASK="Which member of Fleetwood Mac sings 'Everywhere'?"
-FIRST='Stevie Nicks'
-SECOND='Lindsey Buckingham'
-THIRD='Mick Fleetwood'
-FOURTH='Christine McVie'
-FIFTH='John McVie'
-CORRECT='Christine McVie'
+ASK="In the song 'Single Ladies', what does Beyonce urge the single ladies to do?"
+FIRST='Pay your telephone bills'
+SECOND='Put everything you own in a box to the left'
+THIRD='Put your freakum dress on'
+FOURTH='Put your feet up'
+FIFTH='Put your hands up'
+CORRECT='Put your hands up'
 
 curl "${API}${URL_PATH}" \
   --include \

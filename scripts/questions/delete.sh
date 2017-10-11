@@ -2,9 +2,10 @@
 
 API="${API_ORIGIN:-https://monument-app.herokuapp.com}"
 URL_PATH="/questions"
-curl "${API}${URL_PATH}" \
+curl "${API}${URL_PATH}/${ID}" \
   --include \
-  --request GET \
+  --request DELETE \
+  --header "Content-Type: application/json" \
   --header "Authorization: Token token=$TOKEN"
 
 echo
