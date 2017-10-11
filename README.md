@@ -8,7 +8,7 @@
 
 [Deployed API](https://monument-app.herokuapp.com/)
 
-[ERD]{https://i.imgur.com/37fsvDO.png}
+[ERD](https://i.imgur.com/37fsvDO.png)
 
 ## API End-Points
 
